@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.3...v0.0.4) (2024-12-17)
+
+
+### Bug Fixes
+
+* **docs:** update docs ([7ec4feb](https://github.com/AnnatarHe/curl-to-js/commit/7ec4feb2392fde346d96b6ebb25975137fe2a362))
+
 ## [0.0.3](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.2...v0.0.3) (2024-12-17)
 
 
