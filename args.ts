@@ -1,4 +1,4 @@
-import * as shellwords from 'npm:shellwords'
+import { split } from './shellwords.ts'
 
 type ParsedArgs = {
   main: string
@@ -7,7 +7,7 @@ type ParsedArgs = {
 }
 
 export function parseArgs(rawArgs: string): ParsedArgs {
-  const args = shellwords.split(rawArgs)
+  const args = split(rawArgs)
   const result: ParsedArgs = {
     main: '',
     options: {},

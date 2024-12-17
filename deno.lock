@@ -5,9 +5,7 @@
     "jsr:@std/assert@^1.0.9": "1.0.9",
     "jsr:@std/expect@*": "1.0.9",
     "jsr:@std/internal@^1.0.5": "1.0.5",
-    "npm:@types/node@*": "22.5.4",
-    "npm:shellwords@*": "1.0.1",
-    "npm:shellwords@^1.0.1": "1.0.1"
+    "npm:@types/node@*": "22.5.4"
   },
   "jsr": {
     "@std/assert@1.0.8": {
@@ -40,17 +38,13 @@
         "undici-types"
       ]
     },
-    "shellwords@1.0.1": {
-      "integrity": "sha512-Fd5KAbmR0kf6GL4bYJTeHdSKW1mCu6rMxdZcZ4l/hD9wRpBB6RxA01TdmegXWzIhJARyYDFs8EAdnpAsRaDGWw=="
-    },
     "undici-types@6.19.8": {
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/assert@1",
-      "npm:shellwords@^1.0.1"
+      "jsr:@std/assert@1"
     ]
   }
 }
