@@ -79,11 +79,67 @@ const testCases = [
       body: null,
     },
   },
+  {
+    name: 'real complex curl command',
+    input: `
+    curl --request POST \
+  --url https://prompt-pal.annatarhe.com/api/v1/public/prompts/run/PQDE7LRNqgkl/stream \
+  --header 'Content-Type: application/json' \
+  --header 'accept: */*' \
+  --header 'accept-language: en,zh;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7' \
+  --header 'authorization: API 9184b65aecb845a5a0cde15b9a5aaba1' \
+  --header 'cache-control: no-cache' \
+  --header 'origin: http://localhost:3000' \
+  --header 'pragma: no-cache' \
+  --header 'priority: u=1, i' \
+  --header 'referer: http://localhost:3000/' \
+  --header 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+  --header 'sec-ch-ua-mobile: ?0' \
+  --header 'sec-ch-ua-platform: "macOS"' \
+  --header 'sec-fetch-dest: empty' \
+  --header 'sec-fetch-mode: cors' \
+  --header 'sec-fetch-site: cross-site' \
+  --header 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+  --data '{"hello": "world"}'
+    `,
+    expected: {
+      method: 'POST',
+      url: new URL(
+        'https://prompt-pal.annatarhe.com/api/v1/public/prompts/run/PQDE7LRNqgkl/stream',
+      ),
+      headers: {
+        'Content-Type': 'application/json',
+        'accept-language': 'en,zh;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7',
+        'cache-control': 'no-cache',
+        'sec-ch-ua':
+          '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'cross-site',
+        'user-agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+        accept: '*/*',
+        authorization: 'API 9184b65aecb845a5a0cde15b9a5aaba1',
+        origin: 'http',
+        pragma: 'no-cache',
+        priority: 'u=1, i',
+        referer: 'http',
+      },
+      formData: {},
+      params: {},
+      body: {
+        'hello': 'world',
+      },
+    },
+  },
 ]
 
 testCases.forEach(({ name, input, expected }) => {
   Deno.test(`should parse ${name}`, () => {
-    const result = parse(input)
+    const cmd = input.replaceAll(/[\n\t]/g, '')
+    const result = parse(cmd)
     expect(result).toEqual(expected)
   })
 })

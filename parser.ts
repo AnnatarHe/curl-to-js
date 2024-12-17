@@ -32,7 +32,15 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
 
   for (const key in parsed.options) {
     const val = parsed.options[key]
-    if (key === 'H') {
+
+    if (key === 'u' || key === 'url') {
+      const url = (val as string).trim()
+      if (url) {
+        result.url = new URL(url)
+      }
+    }
+
+    if (key === 'H' || key === 'header') {
       const pairs = Array.isArray(val) ? val : [val]
       for (const pair of pairs) {
         const [header, value] = pair.split(':').map((s) => s.trim())
@@ -40,7 +48,7 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
       }
     }
 
-    if (key === 'X') {
+    if (key === 'X' || key === 'request') {
       result.method = val as string
     }
 
@@ -51,7 +59,7 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
         result.formData[k] = value
       }
     }
-    if (key === 'd' || key === 'D') {
+    if (key === 'd' || key === 'data') {
       const d = (val as string).trim()
 
       if (isJSONLike(d)) {
