@@ -16,6 +16,7 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
           release-type: simple
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v2
