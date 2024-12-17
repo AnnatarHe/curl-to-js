@@ -1,4 +1,4 @@
-# @AnnatarHe/curl-to-js
+# @AnnatarHe/curl-to-js [![codecov](https://codecov.io/gh/AnnatarHe/curl-to-js/graph/badge.svg?token=V2IBNU8PDH)](https://codecov.io/gh/AnnatarHe/curl-to-js)
 
 A lightweight library that converts curl commands to JavaScript objects. Perfect for developers who want to transform curl commands into structured data for API testing, documentation, or code generation.
 
