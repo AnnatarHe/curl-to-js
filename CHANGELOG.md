@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.1...v0.0.2) (2024-12-17)
+
+
+### Bug Fixes
+
+* **ci:** ignore cov files to publish ([76cee72](https://github.com/AnnatarHe/curl-to-js/commit/76cee729fda7d8a8e0e70aae136f6cd38ff3f950))
+
 ## 0.0.1 (2024-12-17)
 
 
