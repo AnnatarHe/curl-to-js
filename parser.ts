@@ -2,7 +2,7 @@ import { parseArgs } from './args.ts'
 
 type ParsedCommand<T = unknown> = {
   method: string
-  url: string
+  url?: URL
   headers: Record<string, string>
   params: Record<string, string>
   formData: Record<string, string>
@@ -12,7 +12,7 @@ type ParsedCommand<T = unknown> = {
 export function parse<T = unknown>(command: string): ParsedCommand<T> {
   const result: ParsedCommand<T> = {
     method: '',
-    url: '',
+    url: undefined,
     headers: {},
     params: {},
     formData: {},
@@ -26,7 +26,7 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
 
   for (const val of parsed.args) {
     if (URL.canParse(val)) {
-      result.url = val
+      result.url = new URL(val)
     }
   }
 
@@ -51,6 +51,20 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
         result.formData[k] = value
       }
     }
+    if (key === 'd' || key === 'D') {
+      const d = (val as string).trim()
+
+      if (isJSONLike(d)) {
+        try {
+          result.body = JSON.parse(d) as T
+        } catch {
+          // TODO: maybe should throw an error?
+          result.body = d
+        }
+      } else {
+        result.body = d
+      }
+    }
   }
 
   if (!result.method) {
@@ -58,4 +72,9 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
   }
 
   return result
+}
+
+function isJSONLike(str: string): boolean {
+  return (str.startsWith('{') || str.endsWith('}')) ||
+    (str.startsWith('[') || str.endsWith(']'))
 }

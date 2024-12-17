@@ -7,7 +7,7 @@ const testCases = [
     input: 'curl https://api.example.com/data',
     expected: {
       method: 'GET',
-      url: 'https://api.example.com/data',
+      url: new URL('https://api.example.com/data'),
       headers: {},
       params: {},
       formData: {},
@@ -21,7 +21,7 @@ const testCases = [
         -H "Authorization: Bearer token123"',
     expected: {
       method: 'POST',
-      url: 'https://api.example.com/data',
+      url: new URL('https://api.example.com/data'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer token123',
@@ -38,11 +38,12 @@ const testCases = [
       -d \'{"name": "John", "age": 30}\'',
     expected: {
       method: 'POST',
-      url: 'https://api.example.com/data',
+      url: new URL('https://api.example.com/data'),
       headers: {
         'Content-Type': 'application/json',
       },
       params: {},
+      formData: {},
       body: {
         name: 'John',
         age: 30,
@@ -54,9 +55,10 @@ const testCases = [
     input: 'curl "https://api.example.com/search?q=test&page=1"',
     expected: {
       method: 'GET',
-      url: 'https://api.example.com/search?q=test&page=1',
+      url: new URL('https://api.example.com/search?q=test&page=1'),
       headers: {},
       params: {},
+      formData: {},
       body: null,
     },
   },
@@ -67,7 +69,7 @@ const testCases = [
         -F "description=Profile photo"',
     expected: {
       method: 'POST',
-      url: 'https://api.example.com/form',
+      url: new URL('https://api.example.com/form'),
       headers: {},
       params: {},
       formData: {
