@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.2...v0.0.3) (2024-12-17)
+
+
+### Bug Fixes
+
+* **ci:** add config for release ([a573f88](https://github.com/AnnatarHe/curl-to-js/commit/a573f88962751eee05f1c5783b1d0de57470045f))
+* **parser:** update parser for named variable ([fabc40f](https://github.com/AnnatarHe/curl-to-js/commit/fabc40f1a5732b60332ec5990d60f43540ffbf05))
+
 ## [0.0.2](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.1...v0.0.2) (2024-12-17)
 
 
