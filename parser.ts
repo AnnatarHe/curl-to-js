@@ -59,7 +59,9 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
         result.formData[k] = value
       }
     }
-    if (key === 'd' || key === 'data') {
+    if (
+      key === 'd' || key === 'data' || key === 'data-raw' || key === 'raw'
+    ) {
       const d = (val as string).trim()
 
       if (isJSONLike(d)) {

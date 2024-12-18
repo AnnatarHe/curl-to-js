@@ -134,6 +134,25 @@ const testCases = [
       },
     },
   },
+  {
+    name: 'data-raw',
+    input:
+      `curl --location -g --request POST 'https://open.feishu.cn/open-apis/user/v8/API_FIRE' -H 'x-tt-logid: 20241216111023F39A80E09F49246CA826' -H 'Content-Type: application/json' -H 'Authorization: Bearer I_DO_NOT_WANT_TO_WORK'  --data-raw '{"email":"annatar.he@gmail.com"}' --compressed`,
+    expected: {
+      method: 'POST',
+      url: new URL('https://open.feishu.cn/open-apis/user/v8/API_FIRE'),
+      headers: {
+        'x-tt-logid': '20241216111023F39A80E09F49246CA826',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer I_DO_NOT_WANT_TO_WORK',
+      },
+      formData: {},
+      params: {},
+      body: {
+        'email': 'annatar.he@gmail.com',
+      },
+    },
+  },
 ]
 
 testCases.forEach(({ name, input, expected }) => {
