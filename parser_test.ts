@@ -153,6 +153,21 @@ const testCases = [
       },
     },
   },
+  {
+    name: 'with pipe',
+    input:
+      `curl -X GET "https://api.example.com/data" --data-raw '{"author": "AnnatarHe"}' | jq .`,
+    expected: {
+      method: 'GET',
+      url: new URL('https://api.example.com/data'),
+      headers: {},
+      formData: {},
+      params: {},
+      body: {
+        'author': 'AnnatarHe',
+      },
+    },
+  },
 ]
 
 testCases.forEach(({ name, input, expected }) => {
