@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.5](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.4...v0.0.5) (2024-12-18)
+
+
+### Bug Fixes
+
+* **parser:** support `--data-raw` ([f5112ef](https://github.com/AnnatarHe/curl-to-js/commit/f5112ef6737b7efaf980d0331b349c05ec7d7722))
+* **version:** bump version ([d82ea3b](https://github.com/AnnatarHe/curl-to-js/commit/d82ea3bd88471f3e177dc3cd6e7b9189f092a478))
+
 ## [0.0.4](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.3...v0.0.4) (2024-12-17)
 
 
