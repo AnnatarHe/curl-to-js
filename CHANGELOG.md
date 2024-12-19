@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.6](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.5...v0.0.6) (2024-12-19)
+
+
+### Bug Fixes
+
+* **parser:** add pipe test ([b9d5cf8](https://github.com/AnnatarHe/curl-to-js/commit/b9d5cf8c0a119332eea0b22cc5beef36fd034cb1))
+* **parser:** fix parser if with `curl -sSL xxx` ([053de40](https://github.com/AnnatarHe/curl-to-js/commit/053de4001c915d9d37db3fb2988289c3fc9a97f0))
+* **version:** bump version ([3f66886](https://github.com/AnnatarHe/curl-to-js/commit/3f6688625ef8e34400f9c9e6aea6cbd4dd122bdf))
+
 ## [0.0.5](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.4...v0.0.5) (2024-12-18)
 
 
