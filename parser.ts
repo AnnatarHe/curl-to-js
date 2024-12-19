@@ -29,6 +29,14 @@ export function parse<T = unknown>(command: string): ParsedCommand<T> {
       result.url = new URL(val)
     }
   }
+  // if url is not found in args, check options
+  if (!result.url) {
+    Object.values(parsed.options).forEach((val) => {
+      if (typeof val === 'string' && URL.canParse(val)) {
+        result.url = new URL(val)
+      }
+    })
+  }
 
   for (const key in parsed.options) {
     const val = parsed.options[key]

@@ -168,6 +168,21 @@ const testCases = [
       },
     },
   },
+  {
+    name: 'with pipe and bash command',
+    input:
+      `curl -sSL https://raw.githubusercontent.com/malamtime/installation/master/install.bash | bash`,
+    expected: {
+      method: 'GET',
+      url: new URL(
+        'https://raw.githubusercontent.com/malamtime/installation/master/install.bash',
+      ),
+      headers: {},
+      formData: {},
+      params: {},
+      body: null,
+    },
+  },
 ]
 
 testCases.forEach(({ name, input, expected }) => {
