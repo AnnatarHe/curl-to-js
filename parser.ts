@@ -9,6 +9,12 @@ type ParsedCommand<T = unknown> = {
   body: T | string | null
 }
 
+/**
+ * Parses a curl command into a structured object.
+ *
+ * @param command The curl command to parse.
+ * @returns An object containing the main command, options, and arguments.
+ */
 export function parse<T = unknown>(command: string): ParsedCommand<T> {
   const result: ParsedCommand<T> = {
     method: '',

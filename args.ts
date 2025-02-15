@@ -1,11 +1,20 @@
 import { split } from './shellwords.ts'
 
+/**
+ * Type for parsed command line arguments.
+ */
 type ParsedArgs = {
   main: string
   options: Record<string, string | string[]>
   args: string[]
 }
 
+/**
+ * Parses command line arguments into a structured object.
+ *
+ * @param rawArgs The raw command line arguments.
+ * @returns An object containing the main command, options, and arguments.
+ */
 export function parseArgs(rawArgs: string): ParsedArgs {
   const args = split(rawArgs)
   const result: ParsedArgs = {
