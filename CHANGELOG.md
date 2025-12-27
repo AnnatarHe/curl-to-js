@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.7](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.6...v0.0.7) (2025-12-27)
+
+
+### Features
+
+* **npm:** add npm publishing support ([2a11447](https://github.com/AnnatarHe/curl-to-js/commit/2a114472a4fd7b44501ff6338ac6a805f616e217))
+* **npm:** add npm publishing support with dual JSR compatibility ([992fa4b](https://github.com/AnnatarHe/curl-to-js/commit/992fa4bb11003f0c472afdf9d6fcb17b7330d9d6))
+
+
+### Miscellaneous Chores
+
+* release 0.0.7 ([58a868e](https://github.com/AnnatarHe/curl-to-js/commit/58a868ee23cb3a86b969877770c188330b4b1cea))
+
 ## [0.0.6](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.5...v0.0.6) (2024-12-19)
 
 
