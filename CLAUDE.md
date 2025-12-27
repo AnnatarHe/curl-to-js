@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A Deno library that parses curl commands into structured JavaScript objects. Published to JSR as `@annatarhe/curl-to-js`.
+A Deno library that parses curl commands into structured JavaScript objects. Published to npm as `@annatarhe/curl-to-js`.
 
 ## Commands
 

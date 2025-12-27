@@ -1,6 +1,6 @@
 # @AnnatarHe/curl-to-js [![codecov](https://codecov.io/gh/AnnatarHe/curl-to-js/graph/badge.svg?token=V2IBNU8PDH)](https://codecov.io/gh/AnnatarHe/curl-to-js)
 
-[https://jsr.io/@annatarhe/curl-to-js](https://jsr.io/@annatarhe/curl-to-js)
+[https://www.npmjs.com/package/@annatarhe/curl-to-js](https://www.npmjs.com/package/@annatarhe/curl-to-js)
 
 A lightweight library that converts curl commands to JavaScript objects. Perfect for developers who want to transform curl commands into structured data for API testing, documentation, or code generation.
 
@@ -16,10 +16,7 @@ A lightweight library that converts curl commands to JavaScript objects. Perfect
 ## Installation
 
 ```bash
-# Using Deno
-import { parse } from "jsr:@annatarhe/curl-to-js"
-# pnpm
-pnpm dlx jsr add @annatarhe/curl-to-js
+npm install @annatarhe/curl-to-js
 ```
 
 ## Usage
