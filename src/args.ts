@@ -1,4 +1,4 @@
-import { split } from './shellwords.ts'
+import { split } from './shellwords'
 
 /**
  * Type for parsed command line arguments.

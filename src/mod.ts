@@ -1,2 +1,2 @@
-export { parse } from './parser.ts'
-export { parseArgs } from './args.ts'
+export { parse } from './parser'
+export { parseArgs } from './args'

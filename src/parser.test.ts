@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from './parser.ts'
+import { parse } from './parser'
 
 const testCases = [
   {
