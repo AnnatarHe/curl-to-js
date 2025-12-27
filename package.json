@@ -1,0 +1,40 @@
+{
+  "name": "@annatarhe/curl-to-js",
+  "version": "0.0.6",
+  "description": "Parse curl commands into structured JavaScript objects",
+  "type": "module",
+  "main": "./dist/mod.js",
+  "types": "./dist/mod.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "import": "./dist/mod.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild src/mod.ts src/parser.ts src/args.ts src/shellwords.ts --outdir=dist --format=esm --out-extension:.js=.js && tsc --emitDeclarationOnly",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnatarHe/curl-to-js.git"
+  },
+  "keywords": [
+    "curl",
+    "parser",
+    "http",
+    "request"
+  ],
+  "author": "AnnatarHe",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

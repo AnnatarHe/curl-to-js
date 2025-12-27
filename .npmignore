@@ -1,0 +1,10 @@
+deno.json
+deno.lock
+src/
+*.ts
+!dist/**
+.gitignore
+.github/
+CLAUDE.md
+vitest.config.ts
+tsconfig.json

@@ -1,4 +1,4 @@
-import { expect } from 'jsr:@std/expect'
+import { describe, expect, test } from 'vitest'
 import { parse } from './parser.ts'
 
 const testCases = [
@@ -185,16 +185,18 @@ const testCases = [
   },
 ]
 
-testCases.forEach(({ name, input, expected }) => {
-  Deno.test(`should parse ${name}`, () => {
-    const cmd = input.replaceAll(/[\n\t]/g, '')
-    const result = parse(cmd)
-    expect(result).toEqual(expected)
+describe('parse', () => {
+  testCases.forEach(({ name, input, expected }) => {
+    test(`should parse ${name}`, () => {
+      const cmd = input.replaceAll(/[\n\t]/g, '')
+      const result = parse(cmd)
+      expect(result).toEqual(expected)
+    })
   })
-})
 
-Deno.test('should throw error for invalid curl command', () => {
-  expect(() => {
-    parse('invalid command')
-  }).toThrow('not a curl command')
+  test('should throw error for invalid curl command', () => {
+    expect(() => {
+      parse('invalid command')
+    }).toThrow('not a curl command')
+  })
 })
