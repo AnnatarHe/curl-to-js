@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.9](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.8...v0.0.9) (2025-12-27)
+
+
+### Bug Fixes
+
+* **version:** manually update versions ([8088ce3](https://github.com/AnnatarHe/curl-to-js/commit/8088ce3c023102b4c276e90969755d3994b78bf5))
+
 ## [0.0.8](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.7...v0.0.8) (2025-12-27)
 
 
