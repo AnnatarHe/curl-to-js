@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.8](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.7...v0.0.8) (2025-12-27)
+
+
+### Bug Fixes
+
+* **src:** remove .ts extension from imports ([083d538](https://github.com/AnnatarHe/curl-to-js/commit/083d5384de5dac40648b36129a1c12c5c5d1c1cc))
+* **src:** remove .ts extension from imports ([baab4dd](https://github.com/AnnatarHe/curl-to-js/commit/baab4dd305f5fe19681ca5ecf0d32df4aaf6fdce))
+
 ## [0.0.7](https://github.com/AnnatarHe/curl-to-js/compare/v0.0.6...v0.0.7) (2025-12-27)
 
 
