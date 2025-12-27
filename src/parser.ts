@@ -1,4 +1,4 @@
-import { parseArgs } from './args.ts'
+import { parseArgs } from './args'
 
 type ParsedCommand<T = unknown> = {
   method: string
